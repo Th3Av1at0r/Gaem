@@ -5,83 +5,90 @@ using namespace std;
 class item
 {
 public:
-	int number;
-	string name;
-	// cost
-	int value;
-	// 1 = quest item, 2 = weapon, 3 = sellable
-	int type;
+    int number;
+    string name;
+    // cost
+    int value;
+    // 1 = quest item, 2 = weapon, 3 = sellable
+    int type;
 
-	
+    
 
-	item();
-	item(int i_num, string i_nam, int i_val, int i_type);
+    item();
+    item(int i_num, string i_nam, int i_val, int i_type);
+    void empty();
 
-	bool operator==(item comparator);
-	void operator=(item original);
-	item make_1();
-	item make_2();
-	item make_3();
-	item make_4();
-	item make_5();
-	item make_6();
-	item make_7();
-	item make_8();
-	item make_9();
-	item make_10();
-	item make_11();
-	item make_12();
-	item make_13();
-	item make_14();
-	item make_15();
-	item make_16();
-	item make_17();
-	item make_18();
-	item make_19();
-	item make_20();
-	item make_21();
-	item make_22();
-	item make_23();
-	item make_24();
+    bool operator==(item comparator);
+    void operator=(item original);
+    item make_1();
+    item make_2();
+    item make_3();
+    item make_4();
+    item make_5();
+    item make_6();
+    item make_7();
+    item make_8();
+    item make_9();
+    item make_10();
+    item make_11();
+    item make_12();
+    item make_13();
+    item make_14();
+    item make_15();
+    item make_16();
+    item make_17();
+    item make_18();
+    item make_19();
+    item make_20();
+    item make_21();
+    item make_22();
+    item make_23();
+    item make_24();
+    item make_999();
 
-	item chose_make(int choice);
+    item chose_make(int choice);
 };
 
 
 item::item()
 {
-	number = 0;
-	name = "item";
-	value = 0;
-	type = 0;
+    empty();
 }
 
 item::item(int i_num, string i_nam, int i_val, int i_type)
 {
-	number = i_num;
-	name = i_nam;
-	value = i_val;
-	type = i_type;
+    number = i_num;
+    name = i_nam;
+    value = i_val;
+    type = i_type;
+}
+
+void item::empty()
+{
+    number = 0;
+    name = "item";
+    value = 0;
+    type = 0;
 }
 
 bool item::operator==(item comparator)
 {
-	if (number == comparator.number && name == comparator.name && value == comparator.value && type == comparator.type)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+    if (number == comparator.number && name == comparator.name && value == comparator.value && type == comparator.type)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void item::operator=(item original)
 {
-	number = original.number;
-	name = original.name;
-	value = original.value;
-	type = original.type;
+    number = original.number;
+    name = original.name;
+    value = original.value;
+    type = original.type;
 }
 
 /*
@@ -121,146 +128,146 @@ Item   999:
 */
 item item::make_1()
 {
-	item sword;
+    item sword;
 
-	sword.number = 1;
-	sword.name = "Small Sword";
-	sword.value = 40;
-	sword.type = 1;
+    sword.number = 1;
+    sword.name = "Small Sword";
+    sword.value = 40;
+    sword.type = 1;
 
-	return sword;
+    return sword;
 }
 
 item item::make_2()
 {
-	item sword;
+    item sword;
 
-	sword.number = 2;
-	sword.name = "Short Sword";
-	sword.value = 70;
-	sword.type = 1;
+    sword.number = 2;
+    sword.name = "Short Sword";
+    sword.value = 70;
+    sword.type = 1;
 
-	return sword;
+    return sword;
 }
 
 item item::make_3()
 {
-	item sword;
+    item sword;
 
-	sword.number = 3;
-	sword.name = "Long Sword";
-	sword.value = 140;
-	sword.type = 1;
+    sword.number = 3;
+    sword.name = "Long Sword";
+    sword.value = 140;
+    sword.type = 1;
 
-	return sword;
+    return sword;
 }
 
 item item::make_4()
 {
-	item sword;
+    item sword;
 
-	sword.number = 4;
-	sword.name = "Great Sword";
-	sword.value = 200;
-	sword.type = 1;
+    sword.number = 4;
+    sword.name = "Great Sword";
+    sword.value = 200;
+    sword.type = 1;
 
-	return sword;
+    return sword;
 }
 
 item item::make_5()
 {
-	item bow;
+    item bow;
 
-	bow.number = 5;
-	bow.name = "Short Bow";
-	bow.value = 40;
-	bow.type = 1;
+    bow.number = 5;
+    bow.name = "Short Bow";
+    bow.value = 40;
+    bow.type = 1;
 
-	return bow;
+    return bow;
 }
 
 item item::make_6()
 {
-	item bow;
+    item bow;
 
-	bow.number = 6;
-	bow.name = "Long Bow";
-	bow.value = 70;
-	bow.type = 1;
+    bow.number = 6;
+    bow.name = "Long Bow";
+    bow.value = 70;
+    bow.type = 1;
 
-	return bow;
+    return bow;
 }
 
 item item::make_7()
 {
-	item bow;
+    item bow;
 
-	bow.number = 7;
-	bow.name = "Composite Bow";
-	bow.value = 140;
-	bow.type = 1;
+    bow.number = 7;
+    bow.name = "Composite Bow";
+    bow.value = 140;
+    bow.type = 1;
 
-	return bow;
+    return bow;
 }
 
 item item::make_8()
 {
-	item bow;
+    item bow;
 
-	bow.number = 8;
-	bow.name = "War Bow";
-	bow.value = 200;
-	bow.type = 1;
+    bow.number = 8;
+    bow.name = "War Bow";
+    bow.value = 200;
+    bow.type = 1;
 
-	return bow;
+    return bow;
 }
 
 item item::make_9()
 {
-	item arcanum;
+    item arcanum;
 
-	arcanum.number = 9;
-	arcanum.name = "Arcane Focus";
-	arcanum.value = 40;
-	arcanum.type = 1;
+    arcanum.number = 9;
+    arcanum.name = "Arcane Focus";
+    arcanum.value = 40;
+    arcanum.type = 1;
 
-	return arcanum;
+    return arcanum;
 }
 
 item item::make_10()
 {
-	item arcanum;
+    item arcanum;
 
-	arcanum.number = 10;
-	arcanum.name = "Magic Wand";
-	arcanum.value = 70;
-	arcanum.type = 1;
+    arcanum.number = 10;
+    arcanum.name = "Magic Wand";
+    arcanum.value = 70;
+    arcanum.type = 1;
 
-	return arcanum;
+    return arcanum;
 }
 
 item item::make_11()
 {
-	item arcanum;
+    item arcanum;
 
-	arcanum.number = 11;
-	arcanum.name = "Magic Rod";
-	arcanum.value = 140;
-	arcanum.type = 1;
+    arcanum.number = 11;
+    arcanum.name = "Magic Rod";
+    arcanum.value = 140;
+    arcanum.type = 1;
 
-	return arcanum;
+    return arcanum;
 }
 
 item item::make_12()
 {
-	item arcanum;
+    item arcanum;
 
-	arcanum.number = 12;
-	arcanum.name = "Magic Staff";
-	arcanum.value = 200;
-	arcanum.type = 1;
+    arcanum.number = 12;
+    arcanum.name = "Magic Staff";
+    arcanum.value = 200;
+    arcanum.type = 1;
 
-	return arcanum;
+    return arcanum;
 }
 
 /*
@@ -274,74 +281,74 @@ Item    18: Crate of Spices
 */
 item item::make_13()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 13;
-	treasure.name = "Kitonium Nugget";
-	treasure.value = 40;
-	treasure.type = 2;
+    treasure.number = 13;
+    treasure.name = "Kitonium Nugget";
+    treasure.value = 40;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_14()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 14;
-	treasure.name = "Simple Jewlery";
-	treasure.value = 40;
-	treasure.type = 2;
+    treasure.number = 14;
+    treasure.name = "Simple Jewlery";
+    treasure.value = 40;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_15()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 15;
-	treasure.name = "Ceremonial Weapon";
-	treasure.value = 70;
-	treasure.type = 2;
+    treasure.number = 15;
+    treasure.name = "Ceremonial Weapon";
+    treasure.value = 70;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_16()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 16;
-	treasure.name = "Fine Clothes";
-	treasure.value = 120;
-	treasure.type = 2;
+    treasure.number = 16;
+    treasure.name = "Fine Clothes";
+    treasure.value = 120;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_17()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 17;
-	treasure.name = "Pile of Jewels";
-	treasure.value = 140;
-	treasure.type = 2;
+    treasure.number = 17;
+    treasure.name = "Pile of Jewels";
+    treasure.value = 140;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_18()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 18;
-	treasure.name = "Crate of Spices";
-	treasure.value = 180;
-	treasure.type = 2;
+    treasure.number = 18;
+    treasure.name = "Crate of Spices";
+    treasure.value = 180;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
 }
 
 /*
@@ -356,216 +363,230 @@ Item    24: Giant Sweet Roll
 
 item item::make_19()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 19;
-	treasure.name = "Health Potion";
-	treasure.value = 100;
-	treasure.type = 3;
+    treasure.number = 19;
+    treasure.name = "Health Potion";
+    treasure.value = 100;
+    treasure.type = 3;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_20()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 20;
-	treasure.name = "Mana Potion";
-	treasure.value = 100;
-	treasure.type = 3;
+    treasure.number = 20;
+    treasure.name = "Mana Potion";
+    treasure.value = 100;
+    treasure.type = 3;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_21()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 21;
-	treasure.name = "Sweet Roll";
-	treasure.value = 100;
-	treasure.type = 3;
+    treasure.number = 21;
+    treasure.name = "Sweet Roll";
+    treasure.value = 100;
+    treasure.type = 3;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_22()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 22;
-	treasure.name = "Greater Health Potion";
-	treasure.value = 300;
-	treasure.type = 3;
+    treasure.number = 22;
+    treasure.name = "Greater Health Potion";
+    treasure.value = 300;
+    treasure.type = 3;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_23()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 23;
-	treasure.name = "Greater Mana Potion";
-	treasure.value = 300;
-	treasure.type = 3;
+    treasure.number = 23;
+    treasure.name = "Greater Mana Potion";
+    treasure.value = 300;
+    treasure.type = 3;
 
-	return treasure;
+    return treasure;
 }
 
 item item::make_24()
 {
-	item treasure;
+    item treasure;
 
-	treasure.number = 24;
-	treasure.name = "Giant Sweet Roll";
-	treasure.value = 300;
-	treasure.type = 2;
+    treasure.number = 24;
+    treasure.name = "Giant Sweet Roll";
+    treasure.value = 300;
+    treasure.type = 2;
 
-	return treasure;
+    return treasure;
+}
+
+item item::make_999()
+{
+    item quest_item;
+
+    quest_item.number = 999;
+    quest_item.name = "CHAOS";
+    quest_item.value = 999999;
+    quest_item.type = 0;
+
+    return quest_item;
 }
 
 item item::chose_make(int choice)
 {
-	switch (choice)
-	{
-	case 1:
+    switch (choice)
+    {
+    case 1:
 
-		return make_1();
+        return make_1();
 
-		break;
+        break;
 
-	case 2:
+    case 2:
 
-		return make_2();
+        return make_2();
 
-		break;
+        break;
 
-	case 3:
+    case 3:
 
-		return make_3();
+        return make_3();
 
-		break;
+        break;
 
-	case 4:
+    case 4:
 
-		return make_4();
+        return make_4();
 
-		break;
+        break;
 
-	case 5:
+    case 5:
 
-		return make_5();
+        return make_5();
 
-		break;
+        break;
 
-	case 6:
+    case 6:
 
-		return make_6();
+        return make_6();
 
-		break;
+        break;
 
-	case 7:
+    case 7:
 
-		return make_7();
+        return make_7();
 
-		break;
+        break;
 
-	case 8:
+    case 8:
 
-		return make_8();
+        return make_8();
 
-		break;
+        break;
 
-	case 9:
+    case 9:
 
-		return make_9();
+        return make_9();
 
-		break;
+        break;
 
-	case 10:
+    case 10:
 
-		return make_10();
+        return make_10();
 
-		break;
+        break;
 
-	case 11:
+    case 11:
 
-		return make_11();
+        return make_11();
 
-		break;
+        break;
 
-	case 12:
+    case 12:
 
-		return make_12();
+        return make_12();
 
-		break;
+        break;
 
-	case 13:
+    case 13:
 
-		return make_13();
+        return make_13();
 
-		break;
+        break;
 
-	case 14:
+    case 14:
 
-		return make_14();
+        return make_14();
 
-	case 15:
+    case 15:
 
-		return make_15();
+        return make_15();
 
-		break;
+        break;
 
-	case 16:
+    case 16:
 
-		return make_16();
+        return make_16();
 
-		break;
+        break;
 
-	case 17:
+    case 17:
 
-		return make_17();
+        return make_17();
 
-		break;
+        break;
 
-	case 18:
+    case 18:
 
-		return make_18();
+        return make_18();
 
-		break;
+        break;
 
-	case 19:
+    case 19:
 
-		return make_19();
+        return make_19();
 
-	case 20:
+    case 20:
 
-		return make_20();
+        return make_20();
 
-	case 21:
+    case 21:
 
-		return make_21();
+        return make_21();
 
-		break;
+        break;
 
-	case 22:
+    case 22:
 
-		return make_22();
+        return make_22();
 
-		break;
+        break;
 
-	case 23:
+    case 23:
 
-		return make_23();
+        return make_23();
 
-		break;
+        break;
 
-	case 24:
+    case 24:
 
-		return make_24();
+        return make_24();
 
-		break;
-	}
+        break;
+    }
+    
+    return make_999();
 }
